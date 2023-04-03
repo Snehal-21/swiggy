@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/43b779b2fa.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myntra-restaurants</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #screen{
+            height:1200px;
+            width:100%;
+            /* border:1px solid red; */
+        }
+        #navbar{
+            height:100px;
+            width:100%;
+            /* border:1px solid green; */
+            display: flex;
+            position: fixed;
+            top:0;
+            margin-bottom: 10%;
+            background-color: white;
+        }
+        #navbar>div{
+            width:50%;
+            border-bottom:1px solid black;
+            display: flex;
+            justify-content: center;
+        }
+        #navbar>div:nth-child(1)>div{
+            width:60%;
+            /* border:1px solid red; */
+            display: flex;
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(1){
+            width:25%;
+            height:100%;
+            /* border:1px solid red; */
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(1)>img{
+            height:100%;
+            width:90%;
+        }
+        #navbar>div:nth-child(1)>div{
+            display: flex;
+            align-items: center;
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(2){
+            height:30px;
+            /* border-bottom:1px solid black; */
+            display: flex;
+            align-items: center;
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(2)>p{
+            font-size: 17px;
+            color:rgb(138, 136, 136);
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(2)>p>span{
+            color:black;
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(2)>p>span:hover{
+            cursor: pointer;
+            color:#fc8625;
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(2)>p>i{
+            color:#fc8625;
+            margin-left: 5px;
+        }
+        #navbar>div:nth-child(2){
+            display: flex;
+            justify-content: left;
+            /* border: 1px solid red; */
+            align-items: center;
+        }
+        #navbar>div:nth-child(2)>div{
+            width:90%;
+            height:35%;
+            display: flex;
+            justify-content: left;
+            /* border: 1px solid gold; */
+        }
+        #navbar>div:nth-child(2)>div>div{
+            width:20%;
+            flex-wrap: wrap;
+        }
+        #navbar>div:nth-child(2)>div>div>p{
+            font-size: 20px;
+            color:rgb(73, 72, 72);
+            /* border:1px solid pink; */
+        }
+        #navbar>div:nth-child(2)>div>div>p>span>i{
+            margin-right: 8px;
+        }
+        #body1{
+            height:400px;
+            width:100%;
+            /* border:1px solid green; */
+            background-color: #171a29;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        #body1>div{
+            width:80%;
+            height:80%;
+            /* border:1px solid white; */
+            display: flex;
+            justify-content: space-between;
+        }
+        #body1>div>div{
+            width:22%;
+            height:100%;
+        }
+        #body1>div>div>img{
+            width:100%;
+            height:100%;
+        }
+        #body1>div>div>img:hover{
+            cursor: pointer;
+            scale: 1.05;
+        }
+        #navbar2{
+            width:100%;
+            height:100px;
+            background-color: white;
+            /* border:1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            position:fixed;
+            /* top:0; */
+        }
+        #navbar2>div{
+            width:80%;
+            border-bottom:1px solid grey;
+            display: flex;
+        
+        }
+        #navbar2>div>div:nth-child(1){
+            width:35%;
+            height:50%;
+            /* border:1px solid blue; */
+        }
+        #navbar2>div>div:nth-child(2){
+            width:65%;
+            height:50%;
+            /* border:1px solid blue; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* flex-wrap: wrap; */
+        }
+        #navbar2>div>div:nth-child(2)>div{
+            /* border:1px solid red; */
+        }
+        #navbar2>div>div:nth-child(2)>div>p{
+            font-size: 20px;
+            color:rgb(100, 99, 99);
+        }
+        #navbar2>div>div:nth-child(2)>div:nth-child(6)>p{
+            color:black;
+        }
+        
+
+        /* media query at 1000px */
+        @media screen and (max-width:1000px){
+            #navbar>div:nth-child(1)>div{
+                width:100%;
+            }
+            #navbar>div:nth-child(2)>div{
+                width:100%;
+            }
+            #navbar>div:nth-child(2)>div>div>p{
+                font-size: 16px;
+            }
+            #body1{
+                height:900px;
+            }
+            #body1>div{
+                /* margin-top: -10px; */
+                flex-wrap: wrap;
+                height:400px;
+                height:95%;
+               
+                /* height:900px; */
+            }
+            #body1>div>div{
+                width:48%;
+                height:400px;
+                margin-bottom: 20px;
+            }
+            #navbar2>div{
+                width:98%;
+            }
+            #navbar2>div>div:nth-child(2)>div>p{
+                font-size: 17px;
+            }
+        }
+
+        /* media query at 700px */
+        @media screen and (max-width:700px){
+            #navbar>div:nth-child(2){
+                display: none;
+            }
+            #navbar{
+                display: flex;
+                justify-content: center;
+            }
+            #navbar>div:nth-child(1){
+                width:80%;
+            }
+
+            #body1{
+                height:900px;
+            }
+            #body1>div{
+                width:95%
+               
+                /* height:900px; */
+            }
+            #body1>div>div{
+                width:48%;
+                margin-bottom: 20px;
+            }
+            #navbar2>div{
+                flex-direction: column;
+            }
+            #navbar2>div>div:nth-child(1){
+                height:100%;
+                width:100%;
+                border-bottom: 1px solid grey;
+                /* padding:10px; */
+            }
+            #navbar2>div>div:nth-child(1)>h1{
+                /* margin-top:-10px; */
+                margin-bottom: 5px;
+            }
+            #navbar2>div>div:nth-child(2){
+                height:100%;
+                width:100%;
+                margin-top: 1%;
+            }
+            #navbar2>div>div:nth-child(2)>div>p{
+                font-size: 18px;
+        }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="screen">
+        <div id="navbar">
+            <div>
+                <div>
+                    <div>
+                        <img src="https://logosandtypes.com/wp-content/uploads/2021/01/Swiggy.png"/>
+                    </div>
+                    <div><p><span><u>Vashi</u></span> Navi Mumbai, Maharashtra, India<i class="fa-solid fa-angle-down"></i></p></div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div><p><span><i class="fa-solid fa-magnifying-glass"></i></span> Search</p></div>
+                    <div><p><span><i class="fa-solid fa-certificate"></i></span>Offers<sup style="color:#fc8625">New</sup></p></div>
+                    <div><p><span><i class="fa-solid fa-handshake-angle"></i></span>Help</p></div>
+                    <div><p><span><i class="fa-solid fa-user-plus"></i></span>Sign In</p></div>
+                    <div><p><span><i class="fa-solid fa-cart-shopping"></i></span>Cart</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="body1">
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/pneknawbadtvceqzwiep"/>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/awurei8ypqkafoqay9ym"/>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/zpkkdkmvlj5cuvqbc50t"/>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_520,h_520/rng/md/carousel/production/ifi2lbzxeu1hvsqrsip3"/>
+                </div>
+            </div>
+        </div>
+        <div id="navbar2">
+            <div>
+                <div><h1>728 restaurants</h1></div>
+                <div>
+                    <div><p>Relevance</p></div>
+                    <div><p>Delivery Time</p></div>
+                    <div><p>Rating</p></div>
+                    <div><p>Cost: Low To High</p></div>
+                    <div><p>Cost: High To LOw</p></div>
+                    <div><p>Filters</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
