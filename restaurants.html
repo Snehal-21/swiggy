@@ -133,20 +133,24 @@
             /* border:1px solid red; */
             display: flex;
             justify-content: center;
-            align-items: end;
-            position:fixed;
-            /* top:0; */
+            position: -webkit-sticky;
+            position: sticky;
+             top: 0;
+             box-shadow: 10px 2px 2px rgb(235, 234, 234);
         }
         #navbar2>div{
             width:80%;
             border-bottom:1px solid grey;
             display: flex;
+            align-items: end;
         
         }
         #navbar2>div>div:nth-child(1){
             width:35%;
-            height:50%;
+            height:70%;
             /* border:1px solid blue; */
+            display: flex;
+            align-items: center;
         }
         #navbar2>div>div:nth-child(2){
             width:65%;
@@ -157,9 +161,6 @@
             align-items: center;
             /* flex-wrap: wrap; */
         }
-        #navbar2>div>div:nth-child(2)>div{
-            /* border:1px solid red; */
-        }
         #navbar2>div>div:nth-child(2)>div>p{
             font-size: 20px;
             color:rgb(100, 99, 99);
@@ -167,7 +168,163 @@
         #navbar2>div>div:nth-child(2)>div:nth-child(6)>p{
             color:black;
         }
-        
+        #body2{
+            width:80%;
+            /* height:1070px; */
+            /* border:1px solid red; */
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding-top: 40px;
+        }
+        #body2>div{
+            /* height:490px; */
+            width:22%;
+            /* border:1px solid green; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 6%;
+        }
+        #body2>div>div:nth-child(1){
+            width:100%;
+            height:200px;
+            /* border:1px solid red; */
+        }
+        #body2>div>div:nth-child(1)>img{
+          height:100%;
+          width:100%;
+        }
+        #body2>div>div:nth-child(2){
+            width:100%;
+            height:80px;
+            /* border: 1px solid black; */
+            padding-top:15px;
+        }
+        #body2>div>div:nth-child(2)>p{
+            color:rgb(90, 89, 89);
+        }
+        #body2>div>div:nth-child(3){
+            width:100%;
+            height:40px;
+            border-bottom:1px solid rgb(90, 89, 89);
+            display: flex;
+            align-items: center;
+        }
+        #body2>div>div:nth-child(3)>div{
+            height:50%;
+            width:100%;
+            /* border:1px solid purple; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #body2>div>div:nth-child(3)>div>button{
+            height:100%;
+            width:15%;
+            background-color: #48c479;
+            color:white;
+            border:none;
+        }
+        #body2>div>div:nth-child(3)>div>p{
+            font-size: 12px;
+            color:rgb(90, 89, 89);
+        }
+        #body2>div>div:nth-child(4){
+            width:100%;
+            height:50px;
+            /* border:1px solid gold; */
+            display: flex;
+            align-items: center;
+            color:brown;
+        }
+        #body2>div>div:nth-child(5){
+            height:70px;
+            width:100%;
+            /* border:1px solid pink; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:rgb(115, 115, 249);
+            font-weight: bold;
+            display: none;
+        }
+        #body2>div:hover{
+            box-shadow: 5px 2px 2px 2px rgb(248, 247, 247);
+            scale: 1.05;
+        }
+         #footer{
+            height:750px;
+            width:100%;
+            background-color: black;
+            display: flex;
+            align-items:end;
+            justify-content:center;
+        }
+        #footer>div{
+            width:80%;
+            height:90%;
+            /* border:1px solid gold; */
+        }
+        #footer>div>div:nth-child(1){
+            height:60%;
+            width:100%;
+            /* border-bottom:1px solid grey; */
+            display: flex;
+        }
+        #footer>div>div:nth-child(1)>div{
+            width:25%;
+            height:100%;
+            /* border:1px solid red; */
+            color:white;
+        }
+        #footer>div>div:nth-child(1)>div>h4{
+            color:rgb(175, 171, 171);
+            font-size: 20px;
+            margin-bottom: 10%;
+        }
+        #footer>div>div:nth-child(1)>div>p{
+            font-size: 20px;
+            margin-top: 6%;
+
+        }
+        #footer>div>div:nth-child(1)>div:nth-child(4)>img{
+            border:2px solid grey;
+            width:70%;
+            height:18%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        #footer>div>div:nth-child(2){
+            margin-top: 1%;
+            height:230px;
+            width:100%;
+            border-top:1px solid grey;
+        }
+        #footer>div>div:nth-child(2)>h3{
+            color:rgb(175, 171, 171);
+            margin-top: 3%;
+        }
+        #footer>div>div:nth-child(2)>div{
+            width:100%;
+            height:80%;
+            /* border:1px solid red; */
+            color:white;
+            display: flex;
+        }
+        #footer>div>div:nth-child(2)>div>div{
+            width:25%;
+            height:100%;
+            /* border:1px solid red; */
+            color:white;
+        }
+        #footer>div>div:nth-child(2)>div>div>p{
+            font-size: 20px;
+            margin-top: 6%;
+
+        }
+
 
         /* media query at 1000px */
         @media screen and (max-width:1000px){
@@ -199,8 +356,25 @@
             #navbar2>div{
                 width:98%;
             }
+           
             #navbar2>div>div:nth-child(2)>div>p{
                 font-size: 17px;
+            }
+            #body2{
+                width:95%;
+            }
+            #body2>div>div:nth-child(3)>div>button{
+                width:15%;
+                height:80%;
+                font-size: 10px;
+               
+            }
+            #body2>div>div:nth-child(3)>p{
+                font-size: 10px;
+            }
+            #body2>div>div:nth-child(3){
+                /* border:2px solid red; */
+                align-items: end;
             }
         }
 
@@ -250,6 +424,39 @@
             #navbar2>div>div:nth-child(2)>div>p{
                 font-size: 18px;
         }
+        #body2{
+            width:95%;
+        }
+        #body2>div{
+            width:45%;
+        }
+        #body2>div>div:nth-child(3)>div>button{
+                width:20%;
+                height:100%;
+                font-size: 13px;
+               
+            }
+            #body2>div>div:nth-child(3)>p{
+                font-size: 25px;
+            }
+            #body2>div>div:nth-child(3){
+                /* border:2px solid red; */
+                align-items: center;
+            }
+             #footer{
+                height:800px;
+            }
+            #footer>div{
+                width:100%;
+                margin-top: 30px;
+                /* border:3px solid gold; */
+            }
+            #footer>div>div:nth-child(1){
+                height:250px;
+            }
+            #footer>div>div:nth-child(1)>div:nth-child(4)>img{
+                width:100%;
+            }
         }
 
         
@@ -305,6 +512,458 @@
                 </div>
             </div>
         </div>
+        <div id="body2">
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/plgs0tyizbcb2z7vrgqk"/>
+                </div>
+                <div>
+                    <h3>Dabba Garam (Homely Meals & More)</h3>
+                    <p>Home Food, North Indian, Thalis</p>
+                </div>
+                <div>
+                   <div>
+                    <button><i class="fa-solid fa-star"></i>4.4</button>
+                    <p>.</p>
+                    <p>21 MINS</p>
+                    <p>.</p>
+                    <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                   </div>
+                </div>
+                <div>
+                    <p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p>
+                </div>
+                <div>
+                    <p>QUICK VIEW</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/7bb739d7f6ae8b4ce8ed590765dffd2f"/>
+                </div>
+                <div>
+                    <h3>McDonald's</h3>
+                    <p>Burgers, Beverages, Cafe, Deserts</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/oxbkv7rduqga3ljc5txa"/>
+                </div>
+                <div>
+                    <h3>Bhagat Tarachand</h3>
+                    <p>Street Food,North Indian</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tesnldaw6hkqyep8xj0m"/>
+                </div>
+                <div>
+                    <h3>Bhojanam</h3>
+                    <p>Thalis, Desserts,Indian</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/jmbtcyk3wqkt9kw9ss5o"/>
+                </div>
+                <div>
+                    <h3>Mansoor Bhai's Lucky</h3>
+                    <p>Biryani,Chinese,North Indian</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/n11sccczmnj74iuvfv1o"/>
+                </div>
+                <div>
+                    <h3>Gupta Sandwiches & Snacks</h3>
+                    <p>Fast Food, Biryani, Snacks</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vnhnlefakoveqcx8qiht"/>
+                </div>
+                <div>
+                    <h3>Genuine Beoaster Chicken</h3>
+                    <p>Italian, Pan-Asian, North Indian</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wz3dfvamdawymtxdspu5"/>
+                </div>
+                <div>
+                    <h3>R Bhagat Tarachand</h3>
+                    <p>North Indian, Chinese, Street Food</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/syguue095n5vlucymgsd"/>
+                </div>
+                <div>
+                    <h3>Oye Kiddan</h3>
+                    <p>Street Food</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/f87ny0p8hpeynrv0ycc5"/>
+                </div>
+                <div>
+                    <h3>Meraki</h3>
+                    <p>Chinese</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wnzhrkqvnkiriqajencb"/>
+                </div>
+                <div>
+                    <h3>The Belgian Waffle Co.</h3>
+                    <p>Waffle, Desserts, Ice Cream</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rhrfqof37abefgfbb8kj"/>
+                </div>
+                <div>
+                    <h3>Hotel Punjab Palace</h3>
+                    <p>North Indian</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdcd233971b7c81bf77e1fa4471280eb"/>
+                </div>
+                <div>
+                    <h3>KFC</h3>
+                    <p>Burgers, Biryani, American</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rodvzvtensfyfkmvdzuv"/>
+                </div>
+                <div>
+                    <h3>Navaratna Veg Restaurant</h3>
+                    <p>Indian,Chinese,South Indian</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ujdn6n65xpldnedg7lzp"/>
+                </div>
+                <div>
+                    <h3>Sanjay Lunch Home</h3>
+                    <p>North Indian, Chinese</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rou1szkzwerakoykk66q"/>
+                </div>
+                <div>
+                    <h3>Theobroma</h3>
+                    <p>Backery,Desserts</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rgck2xvldw4mriw2djyt"/>
+                </div>
+                <div>
+                    <h3>Nothing But Chicken</h3>
+                    <p>Salads, Fast Food</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/m3an43cte2csfsjwuk9a"/>
+                </div>
+                <div>
+                    <h3>Tibb's Frankie</h3>
+                    <p>Chinese, Biryani, South Indian</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/82432d7d66dcf2c8065164bd616c59cb"/>
+                </div>
+                <div>
+                    <h3>China Bite</h3>
+                    <p>Chinese</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/5c63d2b772133774707ee3841b5ec3f0"/>
+                </div>
+                <div>
+                    <h3>Chaatwich</h3>
+                    <p>Healthy Food, Beverages,Desserts,Chaat</p>
+                </div>
+                <div>
+                    <div>
+                        <button><i class="fa-solid fa-star"></i>4.4</button>
+                        <p>.</p>
+                        <p>21 MINS</p>
+                        <p>.</p>
+                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                       </div>
+                </div>
+                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div>
+             <div>
+                 <div>
+                     <h4>CAMPANY</h4>
+                     <p>About us</p>
+                     <p>Team</p>
+                     <p>Careers</p>
+                     <p>Swiggy Blog</p>
+                     <p>Bug Bounty</p>
+                     <p>Swiggy One</p>
+                 </div>
+                 <div>
+                     <h4>CONTACT</h4>
+                     <p>Help & Support</p>
+                     <p>Partner with us</p>
+                     <p>Ride with us</p>
+                 </div>
+                 <div>
+                     <h4>LEGAL</h4>
+                     <p>Terms & Conditions</p>
+                     <p>Refund & Cancellation</p>
+                     <p>Privacy Policy</p>
+                     <p>Cookie Policy</p>
+                     <p>Offer Terms</p>
+                 </div>
+                 <div>
+                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_108/play_ip0jfp"/>
+                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_108/iOS_ajgrty"/>
+                 </div>
+             </div>
+             <div>
+                 <h3>WE DELIVER TO</h3>
+                 <div>
+                     <div>
+                         <p>Abohar</p>
+                         <p>Adilabad</p>
+                         <p>Adityapur</p>
+                         <p>Adoni</p>
+                     </div>
+                     <div>
+                         <p>Dehradun</p>
+                         <p>Dehri</p>
+                         <p>Delhi</p>
+                         <p>Deoghar</p>
+                         <p>Deoria-City</p>
+                     </div>
+                     <div>
+                         <p>Khanna</p>
+                         <p>Kharagpur</p>
+                         <p>Kishanganj</p>
+                         <p>KIshangarh</p>
+                         <p>Kochi</p>
+                     </div>
+                     <div>
+                         <p>Purulia</p>
+                         <p>Pusad</p>
+                         <p>Puttur</p>
+                         <p>Rae-Bareli</p>
+                         <p>Paichur</p>
+                     </div>
+                 </div>
+             </div>
+            </div>
+         </div>
     </div>
     
 </body>
