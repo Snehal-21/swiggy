@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <script src="https://kit.fontawesome.com/43b779b2fa.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        #screen{
+            width:100%;
+            /* height:1000px; */
+            /* border:1px solid red; */
+        }
+        #body{
+            width:40%;
+            margin: auto;
+            height:830px;
+            /* border:1px solid blue; */
+            padding:20px;
+            box-shadow: 2px 2px 2px 2px rgb(232, 230, 230);
+        }
+        #body>i{
+            font-size: 30px;
+        }
+        #body1{
+            height:120px;
+            width:100%;
+            /* border:1px solid red; */
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2%;
+        }
+        #body1>div:nth-child(1){
+            width:40%;
+            height:100%;
+            /* border:1px solid green; */
+            padding: 1%;
+        }
+        #body1>div:nth-child(1)>h1{
+            margin-bottom: 10px;
+        }
+        #body1>div:nth-child(1)>p>span{
+            color:black;
+        }
+        #body1>div:nth-child(1)>p{
+            color:orange;
+            margin-bottom: 8%;
+        }
+        #body1>div:nth-child(1)>div{
+            width:50px;
+            height:2px;
+            background-color: black;
+            border-radius: 10px;
+            /* border:1px solid black; */
+        }
+        #body1>div:nth-child(2){
+            width:20%;
+            height:100%;
+            /* border:1px solid green; */
+        }
+        #body1>div:nth-child(2)>img{
+            width:100%;
+            height:100%;
+        }
+        #body2{
+            width:100%;
+            height:240px;
+            /* border:1px solid grey; */
+            margin-top: 5%;
+        }
+        #body2>div{
+            width:100%;
+            height:80px;
+            border-top:1px solid grey;
+            border-right:1px solid grey;
+            border-left:1px solid grey;
+        }
+        #body2>div:nth-child(3){
+            border-bottom: 1px solid grey;
+        }
+        #body2>div>input{
+            width:100%;
+            height:100%;
+            border:none;
+            padding-left: 20px;
+        }
+        #body>p:nth-child(4){
+            margin-top: 5%;
+            font-size: 19px;
+            color: #1f5ff5;
+            font-weight: bold;
+        }
+        #body>button{
+            height:50px;
+            width:100%;
+            background-color: #fc8019;
+            color:white;
+            cursor: pointer;
+            margin-top: 5%;
+            border: none;
+            font-weight: bold;
+            font-size: 17px;
+        }
+        #body>p:nth-child(6){
+            color:black;
+            margin-top: 1%;
+        }
+        #body>p:nth-child(6)>span{
+            color:grey;
+        }
+
+        @media screen and (max-width:1000px) {
+            #body{
+                width:80%;
+            }
+        }
+
+
+
+        @media screen and (max-width:700px) {
+            #body{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="screen">
+        <div id="body">
+            <i class="fa-solid fa-xmark"></i>
+            <div id="body1">
+                <div>
+                    <h1>Sign up</h1>
+                    <p><span>or</span> login to your account</p>
+                    <div></div>
+                </div>
+                <div>
+                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/Image-login_btpq7r" />
+                </div>
+            </div>
+            <div id="body2">
+                <div><input type="number" placeholder="Phone number" /></div>
+                <div><input type="text" placeholder="Name" /></div>
+                <div><input type="email" placeholder="Email" /></div>
+            </div>
+            <p>Have a referral code?</p>
+            <button>CONTINUE</button>
+            <p><span>By creating an account, I accept the</span> Terms & Conditions & Privacy Policy</p>
+        </div>
+    </div>
+</body>
+</html>
