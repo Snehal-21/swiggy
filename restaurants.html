@@ -94,6 +94,9 @@
             color:rgb(73, 72, 72);
             /* border:1px solid pink; */
         }
+        #navbar>div:nth-child(2)>div>div>p:hover{
+            color:#fc8625;
+        }
         #navbar>div:nth-child(2)>div>div>p>span>i{
             margin-right: 8px;
         }
@@ -179,40 +182,68 @@
             padding-top: 40px;
         }
         #body2>div{
-            /* height:490px; */
+            height:450px;
             width:22%;
             /* border:1px solid green; */
             display: flex;
+            padding: 10px;
             flex-direction: column;
-            justify-content: center;
-            margin-bottom: 6%;
+            /* justify-content: center; */
+            margin-bottom: 2%;
         }
-        #body2>div>div:nth-child(1){
+        #body2>div>div:nth-child(1)>div:nth-child(1){
             width:100%;
             height:200px;
             /* border:1px solid red; */
         }
-        #body2>div>div:nth-child(1)>img{
+        #body2>div>div:nth-child(1)>div:nth-child(1)>div{
+            /* background: rgb(58, 60, 65);
+            color: rgb(255, 255, 255);
+            border-color: #8a584b transparent; */
+           
+
+    position: absolute;
+    left:170px;
+    /* left: 50px;
+    top: 500; */
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 9px 4px;
+    max-width: 50%;
+    border-color: #8a584b;
+    background-color: #8a584b;
+      
+        
+        }
+        #body2>div>div:nth-child(1)>div:nth-child(1)>div>div{
+
+            text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+       
+
+        }
+        #body2>div>div:nth-child(1)>div:nth-child(1)>img{
           height:100%;
           width:100%;
         }
-        #body2>div>div:nth-child(2){
+        #body2>div>div:nth-child(1)>div:nth-child(2){
             width:100%;
             height:80px;
             /* border: 1px solid black; */
             padding-top:15px;
         }
-        #body2>div>div:nth-child(2)>p{
+        #body2>div>div:nth-child(1)>div:nth-child(2)>p{
             color:rgb(90, 89, 89);
         }
-        #body2>div>div:nth-child(3){
+        #body2>div>div:nth-child(1)>div:nth-child(3){
             width:100%;
             height:40px;
-            border-bottom:1px solid rgb(90, 89, 89);
+            border-bottom:1px solid rgb(206, 204, 204);
             display: flex;
             align-items: center;
         }
-        #body2>div>div:nth-child(3)>div{
+        #body2>div>div:nth-child(1)>div:nth-child(3)>div{
             height:50%;
             width:100%;
             /* border:1px solid purple; */
@@ -220,18 +251,18 @@
             justify-content: space-between;
             align-items: center;
         }
-        #body2>div>div:nth-child(3)>div>button{
+        #body2>div>div:nth-child(1)>div:nth-child(3)>div>button{
             height:100%;
             width:15%;
             background-color: #48c479;
             color:white;
             border:none;
         }
-        #body2>div>div:nth-child(3)>div>p{
+        #body2>div>div:nth-child(1)>div:nth-child(3)>div>p{
             font-size: 12px;
             color:rgb(90, 89, 89);
         }
-        #body2>div>div:nth-child(4){
+        #body2>div>div:nth-child(1)>div:nth-child(4){
             width:100%;
             height:50px;
             /* border:1px solid gold; */
@@ -239,20 +270,26 @@
             align-items: center;
             color:brown;
         }
-        #body2>div>div:nth-child(5){
-            height:70px;
+        .none{
+           height:50px;
+           /* border:1px solid red; */
+           display: none;
+        }
+        #body2>div:hover {
+            box-shadow: 5px 2px 2px 2px rgb(248, 247, 247);
+            border:1px solid rgb(218, 215, 215);
+        }
+        #body2>div:hover .none{
+            display: block;
+            height:50px;
             width:100%;
-            /* border:1px solid pink; */
+            border-top:1px solid rgb(224, 222, 222);
             display: flex;
             align-items: center;
             justify-content: center;
             color:rgb(115, 115, 249);
             font-weight: bold;
-            display: none;
-        }
-        #body2>div:hover{
-            box-shadow: 5px 2px 2px 2px rgb(248, 247, 247);
-            scale: 1.05;
+            /* display: none; */
         }
          #footer{
             height:750px;
@@ -514,8 +551,13 @@
         </div>
         <div id="body2">
             <div>
+              <div>
                 <div>
-                    <!-- <button>PROMOTED</button> -->
+                    <div style="background: rgb(58, 60, 65);
+                    color: rgb(255, 255, 255);
+                    border-color: #8a584b transparent;">
+                        <div>PROMOTED</div>
+                    </div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/plgs0tyizbcb2z7vrgqk"/>
                 </div>
                 <div>
@@ -534,11 +576,13 @@
                 <div>
                     <p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p>
                 </div>
-                <div>
+              </div>
+                <div class="none">
                     <p>QUICK VIEW</p>
                 </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/7bb739d7f6ae8b4ce8ed590765dffd2f"/>
                 </div>
@@ -555,9 +599,16 @@
                         <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
                        </div>
                 </div>
-                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+                <div>
+                    <p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p>
+                </div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/oxbkv7rduqga3ljc5txa"/>
                 </div>
@@ -574,9 +625,16 @@
                         <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
                        </div>
                 </div>
-                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+                <div>
+                    <p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p>
+                </div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/tesnldaw6hkqyep8xj0m"/>
                 </div>
@@ -594,8 +652,13 @@
                        </div>
                 </div>
                 <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/jmbtcyk3wqkt9kw9ss5o"/>
                 </div>
@@ -612,9 +675,16 @@
                         <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
                        </div>
                 </div>
-                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+                <div>
+                    <p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p>
+                </div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/n11sccczmnj74iuvfv1o"/>
                 </div>
@@ -631,9 +701,16 @@
                         <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
                        </div>
                 </div>
-                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+                <div>
+                    <p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p>
+                </div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+              <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vnhnlefakoveqcx8qiht"/>
                 </div>
@@ -650,9 +727,16 @@
                         <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
                        </div>
                 </div>
-                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+                <div>
+                    <p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p>
+                </div>
+              </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wz3dfvamdawymtxdspu5"/>
                 </div>
@@ -669,9 +753,16 @@
                         <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
                        </div>
                 </div>
-                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+                <div>
+                    <p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p>
+                </div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/syguue095n5vlucymgsd"/>
                 </div>
@@ -688,9 +779,16 @@
                         <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
                        </div>
                 </div>
-                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+                <div>
+                    <p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p>
+                </div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/f87ny0p8hpeynrv0ycc5"/>
                 </div>
@@ -708,8 +806,13 @@
                        </div>
                 </div>
                 <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/wnzhrkqvnkiriqajencb"/>
                 </div>
@@ -727,8 +830,13 @@
                        </div>
                 </div>
                 <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rhrfqof37abefgfbb8kj"/>
                 </div>
@@ -746,65 +854,85 @@
                        </div>
                 </div>
                 <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
-                <div>
-                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdcd233971b7c81bf77e1fa4471280eb"/>
-                </div>
-                <div>
-                    <h3>KFC</h3>
-                    <p>Burgers, Biryani, American</p>
-                </div>
                 <div>
                     <div>
-                        <button><i class="fa-solid fa-star"></i>4.4</button>
-                        <p>.</p>
-                        <p>21 MINS</p>
-                        <p>.</p>
-                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
-                       </div>
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/bdcd233971b7c81bf77e1fa4471280eb"/>
+                    </div>
+                    <div>
+                        <h3>KFC</h3>
+                        <p>Burgers, Biryani, American</p>
+                    </div>
+                    <div>
+                        <div>
+                            <button><i class="fa-solid fa-star"></i>4.4</button>
+                            <p>.</p>
+                            <p>21 MINS</p>
+                            <p>.</p>
+                            <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                           </div>
+                    </div>
+                    <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
                 </div>
-                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
-                <div>
-                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rodvzvtensfyfkmvdzuv"/>
-                </div>
-                <div>
-                    <h3>Navaratna Veg Restaurant</h3>
-                    <p>Indian,Chinese,South Indian</p>
-                </div>
                 <div>
                     <div>
-                        <button><i class="fa-solid fa-star"></i>4.4</button>
-                        <p>.</p>
-                        <p>21 MINS</p>
-                        <p>.</p>
-                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
-                       </div>
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rodvzvtensfyfkmvdzuv"/>
+                    </div>
+                    <div>
+                        <h3>Navaratna Veg Restaurant</h3>
+                        <p>Indian,Chinese,South Indian</p>
+                    </div>
+                    <div>
+                        <div>
+                            <button><i class="fa-solid fa-star"></i>4.4</button>
+                            <p>.</p>
+                            <p>21 MINS</p>
+                            <p>.</p>
+                            <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                           </div>
+                    </div>
+                    <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
                 </div>
-                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
-                <div>
-                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ujdn6n65xpldnedg7lzp"/>
-                </div>
-                <div>
-                    <h3>Sanjay Lunch Home</h3>
-                    <p>North Indian, Chinese</p>
-                </div>
                 <div>
                     <div>
-                        <button><i class="fa-solid fa-star"></i>4.4</button>
-                        <p>.</p>
-                        <p>21 MINS</p>
-                        <p>.</p>
-                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
-                       </div>
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ujdn6n65xpldnedg7lzp"/>
+                    </div>
+                    <div>
+                        <h3>Sanjay Lunch Home</h3>
+                        <p>North Indian, Chinese</p>
+                    </div>
+                    <div>
+                        <div>
+                            <button><i class="fa-solid fa-star"></i>4.4</button>
+                            <p>.</p>
+                            <p>21 MINS</p>
+                            <p>.</p>
+                            <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                           </div>
+                    </div>
+                    <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
                 </div>
-                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rou1szkzwerakoykk66q"/>
                 </div>
@@ -822,8 +950,13 @@
                        </div>
                 </div>
                 <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rgck2xvldw4mriw2djyt"/>
                 </div>
@@ -841,27 +974,37 @@
                        </div>
                 </div>
                 <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
-                <div>
-                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/m3an43cte2csfsjwuk9a"/>
-                </div>
-                <div>
-                    <h3>Tibb's Frankie</h3>
-                    <p>Chinese, Biryani, South Indian</p>
-                </div>
                 <div>
                     <div>
-                        <button><i class="fa-solid fa-star"></i>4.4</button>
-                        <p>.</p>
-                        <p>21 MINS</p>
-                        <p>.</p>
-                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
-                       </div>
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/m3an43cte2csfsjwuk9a"/>
+                    </div>
+                    <div>
+                        <h3>Tibb's Frankie</h3>
+                        <p>Chinese, Biryani, South Indian</p>
+                    </div>
+                    <div>
+                        <div>
+                            <button><i class="fa-solid fa-star"></i>4.4</button>
+                            <p>.</p>
+                            <p>21 MINS</p>
+                            <p>.</p>
+                            <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                           </div>
+                    </div>
+                    <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
                 </div>
-                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
+               <div>
                 <div>
                     <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/82432d7d66dcf2c8065164bd616c59cb"/>
                 </div>
@@ -879,25 +1022,34 @@
                        </div>
                 </div>
                 <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+               </div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
             <div>
                 <div>
-                    <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/5c63d2b772133774707ee3841b5ec3f0"/>
-                </div>
-                <div>
-                    <h3>Chaatwich</h3>
-                    <p>Healthy Food, Beverages,Desserts,Chaat</p>
-                </div>
-                <div>
                     <div>
-                        <button><i class="fa-solid fa-star"></i>4.4</button>
-                        <p>.</p>
-                        <p>21 MINS</p>
-                        <p>.</p>
-                        <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
-                       </div>
+                        <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/5c63d2b772133774707ee3841b5ec3f0"/>
+                    </div>
+                    <div>
+                        <h3>Chaatwich</h3>
+                        <p>Healthy Food, Beverages,Desserts,Chaat</p>
+                    </div>
+                    <div>
+                        <div>
+                            <button><i class="fa-solid fa-star"></i>4.4</button>
+                            <p>.</p>
+                            <p>21 MINS</p>
+                            <p>.</p>
+                            <p><span><i class="fa-solid fa-indian-rupee-sign"></i></span>150 FOR TWO</p>
+                           </div>
+                    </div>
+                    <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
                 </div>
-                <div><p><span><i class="fa-solid fa-certificate"></i></span>30% off | Use TRYNEW</p></div>
+                <div class="none">
+                    <p>QUICK VIEW</p>
+                </div>
             </div>
         </div>
         <div id="footer">
