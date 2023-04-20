@@ -76,7 +76,7 @@ function login(event){
             document.getElementById("lemail").value=''
             document.getElementById("lpassword").value=''
             alert("User log in successfully")
-            // window.location.href="./location.html"
+            window.location.href="./location.html"
         }
         else{
             alert("credentials not matched.")
