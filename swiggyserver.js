@@ -66,13 +66,11 @@ function login(event){
         for(var i=0;i<swiggya.length;i++){
             if(swiggya[i].uemail==lemail && swiggya[i].upassword==lpassword){
                 flag=true;
+                swiggyuser= swiggya[i];
             }
         }
         if(flag==true){
-            swiggya[i]=swiggyuser;
-            swiggya.push(swiggyuser);
-            // console.log(swiggya)
-            localStorage.setItem("swiggylogin",JSON.stringify(swiggya))
+            localStorage.setItem("swiggylogin",JSON.stringify(swiggyuser));
             document.getElementById("lemail").value=''
             document.getElementById("lpassword").value=''
             alert("User log in successfully")
