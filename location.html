@@ -493,6 +493,7 @@
                             <div><a href="/login.html" style="text-decoration: none;"><p>Login</p></a></div>
                             <div><a href="/signin.html" style="text-decoration: none;"><p>Sign up</p></a></div>
                         </div>
+                        <div id="logout"></div>
                     </div>
                     <div>
                         <h1>Cooking gone wrong?</h1>
@@ -638,16 +639,25 @@
         window.onload=function(){
             // alert("working")
 
-            var loginuser=JSON.parse(localStorage.getItem("swiggylogin"))
+            var loginuser=JSON.parse(localStorage.getItem("swiggylogin"));
             // console.log(loginuser)
             if(!!loginuser){
-                var divforhtml=document.getElementById("switch")
-                var name=`<h1>${loginuser.uname}</h1>`
+                var divforhtml=document.getElementById("switch");
+                var logoutdiv=document.getElementById("logout");
+
+                var name=`<h1>${loginuser.uname}</h1>`;
+                var button=`<button onclick="logout()">Logout</button>`;
                 divforhtml.innerHTML=name;
+                logoutdiv.innerHTML=button;
             }
             else{
                 alert("current user absent")
             }
+        }
+        function logout(){
+            alert("logout successful.");
+            localStorage.removeItem("swiggylogin");
+            window.location.reload();
         }
     </script>
 </body>

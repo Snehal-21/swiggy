@@ -556,7 +556,8 @@
                 </div>
             </div>
         </div>
-        <div id="body2">
+        <div id="restaurants"> </div>
+        <!-- <div id="body2">
             <div>
               <div>
                 <div>
@@ -1056,9 +1057,21 @@
                     <p>QUICK VIEW</p>
                 </div>
             </div>
-        </div>
+        </div> -->
        
     </div>
-    
+    <script>
+        window.onload=function(){
+            var divrestaurants=document.getElementById("restaurants");
+            var finaldata="";
+
+            var lsrest=JSON.parse(localStorage.getItem("restaurants"));
+            for(var i=0;i<lsrest.length;i++){
+                finaldata+=`<div id="singlerest"><img src=${lsrest[i].url} /><h1>${lsrest[i].name}</h1><p>${lsrest[i].price}</p></div>`;
+            }
+            console.log(finaldata,"finaldata here");
+            divrestaurants.innerHTML=finaldata;
+        }
+    </script>
 </body>
 </html>

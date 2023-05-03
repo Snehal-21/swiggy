@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addrestaurant</title>
+</head>
+<body>
+    <form onsubmit="addrest(event)">
+        <label>Restaurant Image:</label>
+        <input type="text" id="rurl"/>
+        <label>Restaurant Nmae</label>
+        <input type="text" id="rname"/>
+        <label>Price</label>
+        <input type="number" id="rprice"/>
+        <input type="submit" value="Add Restaurant"/>
+    </form>
+    <script>
+        function addrest(event){
+            event.preventDefault();
+            var url=document.getElementById("rurl").value;
+            var name=document.getElementById("rname").value;
+            var price=document.getElementById("rprice").value;
+            var finaldata={url,name,price};
+            var swiggyls=JSON.parse(localStorage.getItem("restaurants")) || [];
+            swiggyls.push(finaldata);
+            localStorage.setItem("restaurants",JSON.stringify(swiggyls));
+            alert("restaurant added successfully");
+
+        }
+    </script>
+</body>
+</html>
