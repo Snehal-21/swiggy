@@ -382,6 +382,7 @@
             width:23%;
             height:300px;
             text-align: center;
+            border:1px solid grey;
         }
         #singlerest>img{
             width:100%;
@@ -1084,7 +1085,7 @@
 
             var lsrest=JSON.parse(localStorage.getItem("restaurants"));
             for(var i=0;i<lsrest.length;i++){
-                finaldata+=`<div id="singlerest"><img src=${lsrest[i].url} /><h1>${lsrest[i].name}</h1><p>${lsrest[i].price}</p></div>`;
+                finaldata+=`<div id="singlerest"><img src=${lsrest[i].url} /><h4>${lsrest[i].name}</h4><p>${lsrest[i].price}</p></div>`;
             }
             console.log(finaldata,"finaldata here");
             divrestaurants.innerHTML=finaldata;
