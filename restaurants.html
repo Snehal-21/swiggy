@@ -1085,10 +1085,17 @@
 
             var lsrest=JSON.parse(localStorage.getItem("restaurants"));
             for(var i=0;i<lsrest.length;i++){
-                finaldata+=`<div id="singlerest"><img src=${lsrest[i].url} /><h4>${lsrest[i].name}</h4><p>${lsrest[i].price}</p></div>`;
+                finaldata+=`<div onClick ='redirect(${JSON.stringify(lsrest[i])})' id="singlerest"><img src=${lsrest[i].url} /><h4>${lsrest[i].name}</h4><p>${lsrest[i].price}</p></div>`;
             }
             console.log(finaldata,"finaldata here");
             divrestaurants.innerHTML=finaldata;
+        }
+        function redirect(product){
+            var singlerest=JSON.stringify(product);
+            // console.log(singlejwell);
+            // alert("working");
+            localStorage.setItem("curreent-restaurant",singlerest);
+            window.location.href='./single-restaurant.html';
         }
     </script>
 </body>

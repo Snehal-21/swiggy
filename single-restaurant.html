@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>single restaurant</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #screen{
+            /* height:1200px; */
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border:1px solid red; */
+        }
+        #navbar{
+            height:100px;
+            width:100%;
+            /* border:1px solid green; */
+            display: flex;
+            position: fixed;
+            top:0;
+            margin-bottom: 10%;
+            background-color: white;
+        }
+        #navbar>div{
+            width:50%;
+            border-bottom:1px solid black;
+            display: flex;
+            justify-content: center;
+        }
+        #navbar>div:nth-child(1)>div{
+            width:60%;
+            /* border:1px solid red; */
+            display: flex;
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(1){
+            width:25%;
+            height:100%;
+            /* border:1px solid red; */
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(1)>img{
+            height:100%;
+            width:90%;
+        }
+        #navbar>div:nth-child(1)>div{
+            display: flex;
+            align-items: center;
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(2){
+            height:30px;
+            /* border-bottom:1px solid black; */
+            display: flex;
+            align-items: center;
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(2)>p{
+            font-size: 17px;
+            color:rgb(138, 136, 136);
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(2)>p>span{
+            color:black;
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(2)>p>span:hover{
+            cursor: pointer;
+            color:#fc8625;
+        }
+        #navbar>div:nth-child(1)>div>div:nth-child(2)>p>i{
+            color:#fc8625;
+            margin-left: 5px;
+        }
+        #navbar>div:nth-child(2){
+            display: flex;
+            justify-content: left;
+            /* border: 1px solid red; */
+            align-items: center;
+        }
+        #navbar>div:nth-child(2)>div{
+            width:90%;
+            height:35%;
+            display: flex;
+            justify-content: left;
+            /* border: 1px solid gold; */
+        }
+        #navbar>div:nth-child(2)>div>div{
+            width:20%;
+            flex-wrap: wrap;
+        }
+        #navbar>div:nth-child(2)>div>div>p{
+            font-size: 20px;
+            color:rgb(73, 72, 72);
+            /* border:1px solid pink; */
+        }
+        #navbar>div:nth-child(2)>div>div>p:hover{
+            color:#fc8625;
+        }
+        #navbar>div:nth-child(2)>div>div>p>span>i{
+            margin-right: 8px;
+        }
+        #body{
+            width:90%;
+            height:400px;
+            margin-top: 150px;
+            /* border:1px solid red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #left{
+            width:50%;
+            height:100%;
+            /* border:1px solid green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid grey;
+        }
+        #left>img{
+            height:90%;
+            width:90%;
+            /* border:1px solid blue; */
+        }
+        #right{
+            width:50%;
+            height:100%;
+            /* border:1px solid green; */
+            padding: 2%;
+        }
+        #right>h1{
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+        #right>p{
+            margin-bottom: 50px;
+        }
+        #right>div>button{
+            height:40px;
+            width:200px;
+            margin-right: 30px;
+            background-color: #fc8625;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            border: none;
+
+        }
+</style>
+<body>
+    <div id="screen">
+        <div id="navbar">
+            <div>
+                <div>
+                    <div>
+                        <img src="https://logosandtypes.com/wp-content/uploads/2021/01/Swiggy.png"/>
+                    </div>
+                    <div><p><span><u>Vashi</u></span> Navi Mumbai, Maharashtra, India<i class="fa-solid fa-angle-down"></i></p></div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div><p><span><i class="fa-solid fa-magnifying-glass"></i></span> Search</p></div>
+                    <div><p><span><i class="fa-solid fa-certificate"></i></span>Offers<sup style="color:#fc8625">New</sup></p></div>
+                    <div><p><span><i class="fa-solid fa-hand-holding-hand"></i></i></span>Help</p></div>
+                    <div><p><span><i class="fa-solid fa-user-plus"></i></span>Sign In</p></div>
+                    <div><p><span><i class="fa-solid fa-cart-shopping"></i></span>Cart</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <div id="left">
+                <!-- <img src="" alt="img1" /> -->
+            </div>
+            
+            <div id="right">
+                <h1 id="name">name</h1>
+                <p>Rs.<span id="price">100</span></p>
+                <div>
+                    <button>BUY NOW</button>
+                    <button>ADD to CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var restaurant=JSON.parse(localStorage.getItem("curreent-restaurant"));
+        var divimage=document.getElementById("left");
+        var divname=document.getElementById("name");
+        var divprice=document.getElementById("price");
+        var image=`<img src="${restaurant.url}" />`;
+        divimage.innerHTML=image;
+        var name=`${restaurant.name}`;
+        divname.innerHTML=name;
+        var price=`${restaurant.price}`;
+        divprice.innerHTML=price;
+    </script>
+</body>
+</html>
