@@ -150,6 +150,16 @@
             border: none;
 
         }
+        /* #cart{
+            height:40px;
+            width:200px;
+            margin-right: 30px;
+            background-color: #fc8625;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            border: none;
+        } */
 </style>
 <body>
     <div id="screen">
@@ -180,9 +190,9 @@
             <div id="right">
                 <h1 id="name">name</h1>
                 <p>Rs.<span id="price">100</span></p>
-                <div>
+                <div id="cart">
                     <button>BUY NOW</button>
-                    <button>ADD to CART</button>
+                    <button id="cart">ADD to CART</button>
                 </div>
             </div>
         </div>
@@ -192,12 +202,35 @@
         var divimage=document.getElementById("left");
         var divname=document.getElementById("name");
         var divprice=document.getElementById("price");
+        var divcart=document.getElementById("cart");
         var image=`<img src="${restaurant.url}" />`;
         divimage.innerHTML=image;
         var name=`${restaurant.name}`;
         divname.innerHTML=name;
         var price=`${restaurant.price}`;
         divprice.innerHTML=price;
+        var cart=`<button>BUY NOW</button><button onclick='addcart(${JSON.stringify(restaurant)})'>Add To Cart</button>`;
+        divcart.innerHTML=cart;
+        function addcart(product){
+            var currentuser=JSON.parse(localStorage.getItem("swiggylogin"));
+            // console.log(currentuser.uemail);
+            var userdata=JSON.parse(localStorage.getItem("swiggyusers"));
+            for(var i=0;i<userdata.length;i++){
+                if(currentuser.uemail==userdata[i].uemail){
+                    alert("got")
+                   if(userdata[i].cartproducts === undefined){
+                    userdata[i].cartproducts=[product];
+                   }
+                else{
+                    userdata[i].cartproducts.push(product);
+                }
+                alert("product added to the cart");
+                window.location.href='./cart.html';
+            }
+           
+        }
+        localStorage.setItem("swiggyuserdata",JSON.stringify(userdata));
+    }
     </script>
 </body>
 </html>
